@@ -213,6 +213,11 @@ function renderRanking() {
     </div>
   `).join("");
 }
+// Exemplo de como o index.js deve buscar os jogos da nuvem
+async function carregarJogosNoIndex() {
+  const { data: jogos } = await supabase.from("jogos").select("*");
+  // Aqui entra a sua lógica atual que joga os dados dentro do '#jogosContainer'
+}
 function renderBannerJogos() {
   const jogos = getJogos();
   const track = document.getElementById("bannerJogosTrack");
