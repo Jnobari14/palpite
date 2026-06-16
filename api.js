@@ -1,10 +1,10 @@
 function atualizarInfoBolao() {
     // Substitua pela URL da sua API ou arquivo JSON no backend
-    fetch('https://palpite-five.vercel.app/')
+    fetch('https://palpite-five.vercel.app/index.html')
         .then(response => response.json())
         .then(data => {
             // Atualiza a imagem do banner
-            document.getElementById('img-banner').src = data.bannerUrl;
+            document.getElementById('img-banner').src ="https://i.ibb.co/RTsCCWpV/brasil.jpg";
 
             // Atualiza a premiação formatando para moeda local (BRL)
             const valorFormatado = new Intl.NumberFormat('pt-BR', {
