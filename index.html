@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palpite Premiado | Pulse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">Palpite Premiado</span>
+        <h1>COPA DO MUNDO 2026</h1>
+      </div>
+
+      <a class="support-link" id="supportLink" target="_blank" rel="noopener">
+        Dúvidas e suporte
+      </a>
+
+    </header>
+
+    <section class="hero-card">
+      <p class="description">
+        Evento recreativo realizado entre amigos e clientes da Pulse TV.
+      </p>
+
+      <div class="prize-box">
+        <span>Premiação Atual</span>
+        <strong id="premioValor">R$ 0,00</strong>
+      </div>
+      <div class="games-carousel" id="bannerJogosDia">
+        <div class="carousel-track" id="bannerJogosTrack"></div>
+      </div>
+
+      </div>
+      </div>
+
+      <button class="primary-btn" id="abrirPalpiteBtn">Meu palpite</button>
+    </section>
+
+    <section class="card hidden" id="formParticipante">
+      <h2>Dados do palpiteiro</h2>
+
+      <label>
+        Nome
+        <input type="text" id="nomeParticipante" placeholder="Digite seu nome" />
+      </label>
+
+      <label>
+        WhatsApp
+        <input type="tel" id="telefoneParticipante" placeholder="DDD + número" />
+      </label>
+
+      <button class="primary-btn" id="continuarBtn">Continuar</button>
+    </section>
+
+    <section class="card hidden" id="areaPalpites">
+      <h2>Palpite dos jogos</h2>
+      <div id="jogosContainer"></div>
+
+      <div class="actions">
+        <button class="secondary-btn hidden" id="continuarPalpitandoBtn">
+          Continuar palpitando
+        </button>
+        <button class="primary-btn" id="confirmarPalpiteBtn">Confirmar</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="mensagemSucesso">
+      <h2>Palpite enviado com sucesso</h2>
+      <p>
+        Seu palpite será validado com o comprovante de pagamento enviado via WhatsApp.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Resultado e pontuação</h2>
+      <div id="rankingContainer" class="ranking-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Regras</h2>
+      <div id="regrasContainer" class="rules"></div>
+    </section>
+    <footer class="footer-admin">
+      <a href="admin.html">Painel</a>
+    </footer>
+
+  </main>
+
+  <div class="modal hidden" id="modalConfirmacao">
+    <div class="modal-content">
+      <h2>Confirmar palpite</h2>
+      <div id="resumoPalpite"></div>
+
+      <div class="actions">
+        <button class="secondary-btn" id="editarPalpiteBtn">Editar</button>
+        <button class="primary-btn" id="enviarWhatsAppBtn">Confirmar e enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
